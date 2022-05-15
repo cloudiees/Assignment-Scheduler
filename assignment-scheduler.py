@@ -113,7 +113,7 @@ def main():
 		elif len(stringList) == 2:
 			scheduleMsg += stringList[0] + " and " + stringList[1]	
 		elif len(stringList) == 1:
-				scheduleMsg += stringList[i] + "."
+				scheduleMsg += stringList[0] + "."
 		else:
 			for i in range(len(stringList)):
 				if stringList[i] == stringList[-1]:
@@ -125,8 +125,4 @@ def main():
 		time.sleep(0.3)
 		print()
 
-print()
-print()
-print()
-print()
 main()
