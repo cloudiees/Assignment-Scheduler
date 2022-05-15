@@ -89,8 +89,9 @@ def makeSchedule(freeTimeInDays, assignments):
 						for x in range(schedule[i]["freeTime"] - len(schedule[i]["workUnits"])):
 							schedule[i]["workUnits"].append(assignment["name"])
 							assignment["hoursScheduled"] += 1
-		if(assignment["hoursScheduled"] - assignment["length"] > 0):
-			print(assignment["name"] + " is too long to complete in the free time given, " + str(assignment["length"] - assignment["hoursScheduled"]) + " more hours are needed.")		
+		if(assignment["hoursScheduled"] - assignment["length"] != 0):
+			print(assignment["name"] + " is too long to complete in the free time given, " + str(assignment["length"] - assignment["hoursScheduled"]) + " more hours are needed.")
+			print()		
 	return schedule
 			
 def main():
